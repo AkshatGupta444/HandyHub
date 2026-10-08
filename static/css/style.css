@@ -1,0 +1,303 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f7f8fc;
+    color: #172033;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav {
+    height: 72px;
+    background: white;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6%;
+}
+
+.brand {
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.navlinks {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.linkbtn {
+    border: 0;
+    background: none;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.btn {
+    display: inline-block;
+    border: 0;
+    border-radius: 10px;
+    padding: 12px 20px;
+    background: #172033;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn.small {
+    padding: 9px 15px;
+}
+
+.btn.full {
+    width: 100%;
+}
+
+.hero {
+    min-height: 470px;
+    display: flex;
+    align-items: center;
+    padding: 70px 8%;
+    background: linear-gradient(
+        120deg,
+        #e9f1ff,
+        #fff5e8
+    );
+}
+
+.hero h1 {
+    font-size: 55px;
+    max-width: 700px;
+    margin: 18px 0;
+}
+
+.hero p {
+    font-size: 19px;
+    max-width: 600px;
+    color: #687185;
+    line-height: 1.6;
+}
+
+.pill {
+    font-size: 12px;
+    font-weight: bold;
+    background: white;
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+}
+
+.section {
+    padding: 55px 7%;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.sectionhead {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: end;
+    margin-bottom: 25px;
+}
+
+.section h2 {
+    font-size: 30px;
+}
+
+.filters {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.filters input,
+.filters select,
+.authbox input,
+.authbox select,
+textarea {
+    border: 1px solid #dce1ea;
+    border-radius: 9px;
+    padding: 12px;
+    background: white;
+    font-size: 14px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(270px, 1fr));
+    gap: 18px;
+}
+
+.card {
+    background: white;
+    border: 1px solid #e5e8ef;
+    border-radius: 15px;
+    padding: 22px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.03);
+}
+
+.avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: #eef2ff;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.card h3 {
+    margin-bottom: 5px;
+}
+
+.meta {
+    color: #687185;
+    font-size: 14px;
+    margin: 7px 0;
+}
+
+.price {
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.card .btn {
+    width: 100%;
+}
+
+.auth {
+    min-height: calc(100vh - 72px);
+    display: grid;
+    place-items: center;
+    padding: 30px;
+}
+
+.authbox {
+    background: white;
+    width: min(440px, 100%);
+    padding: 35px;
+    border: 1px solid #e4e7ee;
+    border-radius: 18px;
+}
+
+.authbox.wide {
+    width: min(650px, 100%);
+}
+
+.authbox form {
+    display: grid;
+    gap: 13px;
+}
+
+.twocol {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.hidden {
+    display: none;
+}
+
+.message {
+    padding: 8px;
+    font-size: 14px;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.5);
+    display: grid;
+    place-items: center;
+    z-index: 10;
+    padding: 20px;
+}
+
+.modalbox {
+    background: white;
+    width: min(500px,100%);
+    padding: 28px;
+    border-radius: 16px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    border: 0;
+    background: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.modalbox textarea {
+    width: 100%;
+    height: 130px;
+    margin: 15px 0;
+    resize: vertical;
+}
+
+.modalbox .btn {
+    width: 100%;
+}
+
+.request {
+    background: white;
+    border: 1px solid #e3e6ed;
+    border-radius: 13px;
+    padding: 18px;
+    margin: 12px 0;
+}
+
+.status {
+    display: inline-block;
+    padding: 5px 9px;
+    border-radius: 20px;
+    background: #eef2ff;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 35px;
+    color: #7b8495;
+    border-top: 1px solid #e5e8ee;
+}
+
+@media(max-width:750px) {
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .sectionhead {
+        display: block;
+    }
+
+    .filters {
+        margin-top: 20px;
+    }
+
+    .filters > * {
+        width: 100%;
+    }
+
+    .twocol {
+        grid-template-columns: 1fr;
+    }
+}

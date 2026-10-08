@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - HandyHub</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+
+<nav>
+
+    <a class="brand" href="/">
+        HandyHub
+    </a>
+
+    <div class="navlinks">
+
+        <a href="/">
+            Services
+        </a>
+
+        <button class="linkbtn" onclick="logout()">
+            Logout
+        </button>
+
+    </div>
+
+</nav>
+
+<main class="section">
+
+    <div class="welcome">
+
+        <span class="pill">
+            DASHBOARD
+        </span>
+
+        <h1>
+            Hello, {{ user.name }} 👋
+        </h1>
+
+        <p>
+            {{ user.role|capitalize }}
+            •
+            {{ user.city or "City not set" }}
+        </p>
+
+    </div>
+
+    <h2>Your Service Requests</h2>
+
+    <div id="requests" class="requests">
+        Loading...
+    </div>
+
+</main>
+
+<footer>
+    HandyHub
+</footer>
+
+<script src="/static/js/script.js"></script>
+
+</body>
+</html>

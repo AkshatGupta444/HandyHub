@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - HandyHub</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+
+<nav>
+    <a class="brand" href="/">HandyHub</a>
+
+    <div class="navlinks">
+        <a href="/">Home</a>
+        <a href="/register">Register</a>
+    </div>
+</nav>
+
+<main class="auth">
+
+    <div class="authbox">
+
+        <h1>Welcome Back</h1>
+
+        <p>Login to your HandyHub account.</p>
+
+        <form id="loginForm">
+
+            <input
+                name="email"
+                type="email"
+                placeholder="Email"
+                required
+            >
+
+            <input
+                name="password"
+                type="password"
+                placeholder="Password"
+                required
+            >
+
+            <button class="btn full">
+                Login
+            </button>
+
+            <div id="message" class="message"></div>
+
+        </form>
+
+    </div>
+
+</main>
+
+<script src="/static/js/script.js"></script>
+
+</body>
+</html>

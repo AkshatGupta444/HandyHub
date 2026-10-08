@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - HandyHub</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+
+<nav>
+    <a class="brand" href="/">HandyHub</a>
+
+    <div class="navlinks">
+        <a href="/">Home</a>
+        <a href="/login">Login</a>
+    </div>
+</nav>
+
+<main class="auth">
+
+    <div class="authbox wide">
+
+        <h1>Create Account</h1>
+
+        <p>Join HandyHub as a customer or service provider.</p>
+
+        <form id="registerForm">
+
+            <div class="twocol">
+
+                <input
+                    name="name"
+                    placeholder="Full Name"
+                    required
+                >
+
+                <input
+                    name="email"
+                    type="email"
+                    placeholder="Email"
+                    required
+                >
+
+            </div>
+
+            <div class="twocol">
+
+                <input
+                    name="password"
+                    type="password"
+                    minlength="6"
+                    placeholder="Password"
+                    required
+                >
+
+                <input
+                    name="phone"
+                    placeholder="Phone"
+                >
+
+            </div>
+
+            <div class="twocol">
+
+                <input
+                    name="city"
+                    placeholder="City"
+                >
+
+                <select name="role" id="role">
+
+                    <option value="customer">
+                        Customer
+                    </option>
+
+                    <option value="provider">
+                        Service Provider
+                    </option>
+
+                </select>
+
+            </div>
+
+            <div id="providerFields" class="hidden">
+
+                <div class="twocol">
+
+                    <select
+                        name="service_id"
+                        id="registerService"
+                    >
+                        <option value="">
+                            Select Service
+                        </option>
+                    </select>
+
+                    <input
+                        name="experience"
+                        type="number"
+                        min="0"
+                        placeholder="Experience (years)"
+                    >
+
+                </div>
+
+                <input
+                    name="price"
+                    type="number"
+                    min="0"
+                    placeholder="Starting Price"
+                >
+
+            </div>
+
+            <button class="btn full">
+                Create Account
+            </button>
+
+            <div id="message" class="message"></div>
+
+        </form>
+
+    </div>
+
+</main>
+
+<script src="/static/js/script.js"></script>
+
+</body>
+</html>

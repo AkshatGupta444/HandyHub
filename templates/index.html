@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HandyHub - Local Services</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+
+<nav>
+    <a class="brand" href="/">HandyHub</a>
+
+    <div class="navlinks">
+        <a href="/">Home</a>
+
+        {% if user %}
+            <a href="/dashboard">Dashboard</a>
+            <button class="linkbtn" onclick="logout()">Logout</button>
+        {% else %}
+            <a href="/login">Login</a>
+            <a class="btn small" href="/register">Register</a>
+        {% endif %}
+    </div>
+</nav>
+
+<section class="hero">
+    <div>
+        <span class="pill">LOCAL SERVICES • MADE SIMPLE</span>
+
+        <h1>Find trusted local professionals.</h1>
+
+        <p>
+            Discover electricians, plumbers, carpenters,
+            cleaners and other professionals in one place.
+        </p>
+
+        <a class="btn" href="#providers">Find a Service</a>
+    </div>
+</section>
+
+<section class="section" id="providers">
+
+    <div class="sectionhead">
+
+        <div>
+            <h2>Available Professionals</h2>
+            <p>Search by service, provider or city.</p>
+        </div>
+
+        <div class="filters">
+
+            <input
+                id="search"
+                placeholder="Search service or provider"
+            >
+
+            <input
+                id="city"
+                placeholder="City"
+            >
+
+            <select id="service">
+                <option value="">All Services</option>
+            </select>
+
+            <button class="btn" onclick="loadProviders()">
+                Search
+            </button>
+
+        </div>
+
+    </div>
+
+    <div id="providerGrid" class="grid">
+        Loading providers...
+    </div>
+
+</section>
+
+<div id="modal" class="modal hidden">
+
+    <div class="modalbox">
+
+        <button type="button" class="close" onclick="document.getElementById('modal').classList.add('hidden')">×</button>
+
+        <h2>Request Service</h2>
+
+        <div id="modalInfo"></div>
+
+        <textarea
+            id="description"
+            placeholder="Describe what you need..."
+        ></textarea>
+
+        <button class="btn" onclick="submitRequest()">
+            Send Request
+        </button>
+
+    </div>
+
+</div>
+
+<footer>
+    © 2026 HandyHub | Local Services Platform
+</footer>
+
+<script src="/static/js/script.js"></script>
+
+</body>
+</html>
